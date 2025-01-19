@@ -6,6 +6,7 @@ using namespace std;
 int getSecondLargest(vector <int>& arr,int first,int second,int index) {
 	if (index == arr.size() - 1) {
 		if (arr[index] > first) {
+			second = first;
 			first = arr[index];
 		}
 		else if (arr[index] < first && arr[index] > second) {
