@@ -14,6 +14,7 @@ int getSecondLargest(vector <int>& arr,int first,int second,int index) {
 		return second;
 	}
 	if (arr[index] > first) {
+		second = first;
 		first = arr[index];
 	}
 	else if (arr[index] < first && arr[index] > second) {
@@ -23,6 +24,6 @@ int getSecondLargest(vector <int>& arr,int first,int second,int index) {
 }
 
 int main() {
-	vector<int> arr = { 12, 35, 1, 10, 34, 1 };
+	vector<int> arr = { 12, 35, 1, 10, 340, 1 };
 	cout << getSecondLargest(arr,-1,-1,0);
 }
